@@ -7,4 +7,8 @@ router.post("/signup", UserController.user_signup);
 
 router.post("/login", UserController.user_login);
 
+router.post("/loginFacebook", UserController.user_loginFacebook);
+
+router.get("/:userId", UserController.user_detail);
+
 module.exports = router;

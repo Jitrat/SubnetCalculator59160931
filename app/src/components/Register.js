@@ -29,11 +29,12 @@ class Register extends Component {
         console.log(this.state);
               
         if (this.validateForm()) {
-            axios.post("http://localhost:4200/user/signup",{
+            axios.post("https://server-buu-59160548.herokuapp.com/user/signup",{
                 email: this.state.fields.email,
                 password: this.state.fields.password
             }).then(() => {
                 alert("สมัครสมาชิกสำเร็จ")
+                this.props.history.push(`/`)
             }).catch(err => {
                 console.log(err);
             })
